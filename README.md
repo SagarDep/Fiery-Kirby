@@ -21,6 +21,13 @@ Walkthrough of level 1 game play
 
 ![capture22](https://cloud.githubusercontent.com/assets/12980868/18617141/faade444-7d96-11e6-84fe-885318724712.gif)
 
+## Credit
+All sprites were obtained from [SpritersResource](http://www.spriters-resource.com/), http://kenney.nl/assets with catchy tunes from [Candy Valley](http://www.playonloop.com/2015-music-loops/candy-valley/)
+
+Thanks to Mega Warp, SpriterTrooper, Drshnaps and Kenney
+
+Kirby is © Nintendo and Hal Labs
+
 ## License
 ```
 Copyright [2016] [Victor Akap Oben]
