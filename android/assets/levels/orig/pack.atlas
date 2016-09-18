@@ -1,0 +1,147 @@
+
+pack.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+brickWall
+  rotate: false
+  xy: 52, 74
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+bush
+  rotate: false
+  xy: 228, 166
+  size: 70, 70
+  split: 0, 0, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+cactus
+  rotate: false
+  xy: 300, 166
+  size: 70, 70
+  split: 0, 0, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+cloud1
+  rotate: false
+  xy: 2, 176
+  size: 224, 60
+  split: 0, 0, 0, 0
+  orig: 224, 60
+  offset: 0, 0
+  index: -1
+cloud2
+  rotate: false
+  xy: 2, 146
+  size: 128, 28
+  split: 0, 0, 0, 0
+  orig: 128, 28
+  offset: 0, 0
+  index: -1
+crab
+  rotate: false
+  xy: 444, 215
+  size: 24, 21
+  orig: 24, 21
+  offset: 0, 0
+  index: -1
+fenceBroken
+  rotate: false
+  xy: 372, 166
+  size: 70, 70
+  split: 0, 0, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grass
+  rotate: false
+  xy: 52, 2
+  size: 70, 70
+  split: 12, 13, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grass
+  rotate: false
+  xy: 52, 2
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grassHalfLeft
+  rotate: false
+  xy: 132, 104
+  size: 70, 70
+  split: 0, 0, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grassHalfMid
+  rotate: false
+  xy: 124, 32
+  size: 70, 70
+  split: 0, 0, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+grassHalfRight
+  rotate: false
+  xy: 204, 94
+  size: 70, 70
+  split: 0, 0, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+hillsmall
+  rotate: false
+  xy: 2, 38
+  size: 48, 106
+  split: 0, 0, 0, 0
+  orig: 48, 106
+  offset: 0, 0
+  index: -1
+plant
+  rotate: false
+  xy: 276, 94
+  size: 70, 70
+  split: 0, 0, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+rock
+  rotate: false
+  xy: 348, 94
+  size: 70, 70
+  split: 0, 0, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+sandHalfLeft
+  rotate: false
+  xy: 196, 22
+  size: 70, 70
+  split: 0, 0, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+sandHalfMid
+  rotate: false
+  xy: 268, 22
+  size: 70, 70
+  split: 0, 0, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+sandHalfRight
+  rotate: false
+  xy: 340, 22
+  size: 70, 70
+  split: 0, 0, 0, 0
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
