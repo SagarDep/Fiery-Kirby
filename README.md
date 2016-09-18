@@ -1,8 +1,20 @@
 # Fiery-Kirby
-Platformer game with Kirby as main character. Built using Libdgx and designed using [Overlap2D](http://overlap2d.com/)
+Here is a platformer game with Kirby as main character which I made from scratch. Built using Libdgx and designed using [Overlap2D](http://overlap2d.com/).
 
 Level demo https://youtu.be/vU91DTM5uts
 
+## Features
+With this game, you can:
+
+* Blast aweful crab enemies to smithereens
+
+* Have the cutest looking kirby jumping around your screen
+
+* Avoid getting hit, or its curtains for kirby
+
+* Defeat all enemies to escape in a flying portal
+
+* The best part: Game logic has been separated from world design. Now anyone can design their own level.
 
 ## GamePlay Video
 Walkthrough of level 1 game play
