@@ -28,7 +28,6 @@ import static com.mygdx.fierykirby.gamedev.Utility.Constants.LEVEL_ENEMY_TAG;
 import static com.mygdx.fierykirby.gamedev.Utility.Constants.LEVEL_HEIGHT_KEY;
 import static com.mygdx.fierykirby.gamedev.Utility.Constants.LEVEL_IDENTIFIER_KEY;
 import static com.mygdx.fierykirby.gamedev.Utility.Constants.LEVEL_IMAGENAME_KEY;
-import static com.mygdx.fierykirby.gamedev.Utility.Constants.LEVEL_IMAGES;
 import static com.mygdx.fierykirby.gamedev.Utility.Constants.LEVEL_SUPER_COMPOSITES;
 import static com.mygdx.fierykirby.gamedev.Utility.Constants.LEVEL_WIDTH_KEY;
 import static com.mygdx.fierykirby.gamedev.Utility.Constants.LEVEL_X_KEY;
@@ -55,7 +54,7 @@ public class LevelLoader {
             JSONObject rootJsonObj = (JSONObject) parser.parse(file.reader());
 
             JSONObject composite = (JSONObject) rootJsonObj.get(LEVEL_COMPOSITE);
-            JSONArray platforms = (JSONArray) composite.get(LEVEL_IMAGES);
+            //JSONArray platforms = (JSONArray) composite.get(LEVEL_IMAGES);
             JSONArray composedPlatforms = (JSONArray) composite.get(LEVEL_SUPER_COMPOSITES);
             JSONArray nonPlatformArr = (JSONArray) composite.get(LEVEL_9PATCHES);
 

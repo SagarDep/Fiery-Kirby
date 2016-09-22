@@ -25,6 +25,7 @@ public class GameScreen extends ScreenAdapter {
     ExtendViewport gameplayViewport;
     private KirbyHUD hud;
 
+
     @Override
     public void show() {
 
@@ -34,7 +35,6 @@ public class GameScreen extends ScreenAdapter {
         level = LevelLoader.load("level1", gameplayViewport);
         batch = new SpriteBatch();
         hud = new KirbyHUD();
-
 
     }
 
@@ -67,6 +67,8 @@ public class GameScreen extends ScreenAdapter {
         batch.setProjectionMatrix(gameplayViewport.getCamera().combined);
         level.render(batch);
         hud.render(batch, level.getKirby().getLives(), level.score);
+
+
 
     }
 

@@ -12,9 +12,9 @@ public interface Constants {
     Color BACKGROUND_COLOR = Color.SKY;
     float WORLD_SIZE = 200;
     String TEXTURE_ATLAS = "images/Sprites.txt";
-    float CHASE_CAM_MOVE_SPEED = WORLD_SIZE;
     float DEFAULT_SCALE = 1.0f;
     float GROUND_HEIGHT = 12.5f;
+    float LEVEL_END_DURATION = 5f;
 
     // HUD
     float HUD_MARGIN = 15;
@@ -155,18 +155,6 @@ public interface Constants {
     float DIST_APART = 15f;
     float EXIT_PORTAL_SPEED = 30f;
     Vector2 INITIAL_POSITION = new Vector2(100, 91);
-
-    // Teleportation
-    String TELEPORT = "teleport";
-    String TELEPORT2= "teleport2";
-    String TELEPORT3 = "teleport3";
-    String TELEPORT4 = "teleport4";
-    String TELEPORT5 = "teleport5";
-    String TELEPORT6 = "teleport6";
-    String TELEPORT7 = "teleport7";
-    String TELEPORT8 = "teleport8";
-    String TELEPORT9 = "teleport9";
-    String TELEPORT10 = "teleport10";
 
 
     // Overlay

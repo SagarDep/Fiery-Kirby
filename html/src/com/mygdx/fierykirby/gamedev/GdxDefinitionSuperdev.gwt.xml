@@ -5,7 +5,9 @@
 	<inherits name='com.badlogic.gdx.physics.box2d.box2d-gwt' />
 
     <inherits name='com.mygdx.fierykirby.gamedev.GdxDefinition' />
+	<inherits name="com.google.gwt.http.HTTP" />
 	<inherits name="com.google.gwt.json.JSON" />
+
 
 	<collapse-all-properties />
     

@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.DelayedRemovalArray;
+import com.badlogic.gdx.utils.TimeUtils;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.mygdx.fierykirby.gamedev.Sprites.BackgroundSprite;
 import com.mygdx.fierykirby.gamedev.Sprites.Bullet;
@@ -17,12 +18,18 @@ import com.mygdx.fierykirby.gamedev.Sprites.Explosion;
 import com.mygdx.fierykirby.gamedev.Sprites.GameOverOverlay;
 import com.mygdx.fierykirby.gamedev.Sprites.Kirby;
 import com.mygdx.fierykirby.gamedev.Sprites.Platform;
-import com.mygdx.fierykirby.gamedev.Sprites.Teleport;
 import com.mygdx.fierykirby.gamedev.Sprites.VictoryOverlay;
 import com.mygdx.fierykirby.gamedev.Utility.Assets;
 import com.mygdx.fierykirby.gamedev.Utility.Enums.Direction;
+import com.mygdx.fierykirby.gamedev.Utility.LevelLoader;
+import com.mygdx.fierykirby.gamedev.Utility.Utils;
 
-import static com.mygdx.fierykirby.gamedev.Utility.Constants.*;
+import static com.mygdx.fierykirby.gamedev.Utility.Constants.DIST_APART;
+import static com.mygdx.fierykirby.gamedev.Utility.Constants.ENEMY_DEAD_OFFSET;
+import static com.mygdx.fierykirby.gamedev.Utility.Constants.EXIT_PORTAL_OFFSET_TO_MIDDLE_POS;
+import static com.mygdx.fierykirby.gamedev.Utility.Constants.EXPLOSION_SUPER;
+import static com.mygdx.fierykirby.gamedev.Utility.Constants.KIRBY_OFFSET_TO_MID_POS;
+import static com.mygdx.fierykirby.gamedev.Utility.Constants.LEVEL_END_DURATION;
 
 /**
  * Created by galaxywizkid on 8/23/16.
@@ -31,7 +38,7 @@ public class Level {
 
     public int score;
     private Kirby kirby;
-    private boolean gameOver;
+    public boolean gameOver;
     private boolean victory;
     private DelayedRemovalArray<Enemy> enemies;
     private Array<Platform> platforms;
@@ -45,9 +52,9 @@ public class Level {
     private ExitPortal exitPortal;
     private VictoryOverlay victoryOverlay;
     private GameOverOverlay gameOverOverlay;
+    long levelEndOverlayStartTime;
 
-    Music music;
-    private Teleport teleport;
+    private Music music;
     private DelayedRemovalArray<Coin> coins;
 
     public Level(Viewport viewport) {
@@ -64,7 +71,6 @@ public class Level {
         victory = false;
         this.viewport = viewport;
         exitPortal = new ExitPortal();
-        // teleport = new Teleport(new Vector2());
         victoryOverlay = new VictoryOverlay(this);
         gameOverOverlay = new GameOverOverlay(this);
 
@@ -255,7 +261,19 @@ public class Level {
             exitPortal.render(batch);
         }
 
-        if(gameOver){
+        if (gameOver) {
+            if (levelEndOverlayStartTime == 0) {
+                levelEndOverlayStartTime = TimeUtils.nanoTime();
+            }
+            gameOverOverlay.render(batch);
+
+            if (Utils.timeInSecsSince(levelEndOverlayStartTime) > LEVEL_END_DURATION) {
+                levelEndOverlayStartTime = 0;
+                levelFailed();
+            }
+        }
+
+        if (gameOver) {
             gameOverOverlay.render(batch);
         }
 
@@ -264,6 +282,28 @@ public class Level {
         }
 
         batch.end();
+    }
+
+
+    private void renderLevelEndOverlays(SpriteBatch batch) {
+        if (gameOver) {
+            if (levelEndOverlayStartTime == 0) {
+                levelEndOverlayStartTime = TimeUtils.nanoTime();
+            }
+            gameOverOverlay.render(batch);
+
+            if (Utils.timeInSecsSince(levelEndOverlayStartTime) > LEVEL_END_DURATION) {
+                levelEndOverlayStartTime = 0;
+                levelFailed();
+            }
+        }
+    }
+
+
+    public void levelFailed() {
+        //startNewLevel();
+        Level level = new Level(viewport);
+        level = LevelLoader.load("level1", viewport);
     }
 
     public Array<Platform> getPlatforms() {
@@ -294,7 +334,7 @@ public class Level {
         return victory;
     }
 
-    public boolean getGameOver(){
+    public boolean getGameOver() {
         return gameOver;
     }
 
