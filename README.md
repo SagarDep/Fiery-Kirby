@@ -1,5 +1,5 @@
 # Fiery-Kirby
-Here is a platformer game with Kirby as main character which I made from scratch. Built using Libdgx and designed using [Overlap2D](http://overlap2d.com/).
+Here is a platformer game with Kirby as main character which I made from scratch. Built using [Libdgx](https://libgdx.badlogicgames.com/) and designed using [Overlap2D](http://overlap2d.com/).
 
 Level demo https://youtu.be/vU91DTM5uts
 
