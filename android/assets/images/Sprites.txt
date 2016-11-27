@@ -1,11 +1,11 @@
 Sprites.png
-size: 254, 847
+size: 255, 879
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
 berry
   rotate: false
-  xy: 202, 490
+  xy: 27, 806
   size: 12, 10
   orig: 12, 10
   offset: 0, 0
@@ -24,16 +24,51 @@ bush
   orig: 70, 70
   offset: 0, 0
   index: -1
+button-down
+  rotate: false
+  xy: 202, 501
+  size: 53, 25
+  orig: 53, 25
+  offset: 0, 0
+  index: -1
+button-jump
+  rotate: false
+  xy: 202, 528
+  size: 53, 25
+  orig: 53, 25
+  offset: 0, 0
+  index: -1
+button-move-left
+  rotate: false
+  xy: 226, 409
+  size: 26, 53
+  orig: 26, 53
+  offset: 0, 0
+  index: -1
+button-move-right
+  rotate: false
+  xy: 42, 821
+  size: 26, 53
+  orig: 26, 53
+  offset: 0, 0
+  index: -1
+button-shoot
+  rotate: false
+  xy: 200, 761
+  size: 42, 45
+  orig: 42, 45
+  offset: 0, 0
+  index: -1
 cactus
   rotate: false
-  xy: 0, 765
+  xy: 0, 821
   size: 40, 58
   orig: 70, 70
   offset: 15, 0
   index: -1
 closed_mouth
   rotate: false
-  xy: 190, 809
+  xy: 82, 756
   size: 21, 21
   orig: 21, 21
   offset: 0, 0
@@ -54,119 +89,119 @@ cloud2
   index: -1
 cloud_enemy
   rotate: false
-  xy: 200, 726
+  xy: 200, 723
   size: 46, 36
   orig: 46, 36
   offset: 0, 0
   index: -1
 crab
   rotate: false
-  xy: 42, 752
+  xy: 60, 720
   size: 24, 21
   orig: 24, 21
   offset: 0, 0
   index: -1
 crab1
   rotate: false
-  xy: 42, 775
+  xy: 56, 743
   size: 24, 21
   orig: 24, 21
   offset: 0, 0
   index: -1
 crab2
   rotate: false
-  xy: 124, 765
+  xy: 193, 859
   size: 26, 20
   orig: 26, 20
   offset: 0, 0
   index: -1
 crab3
   rotate: false
-  xy: 68, 764
+  xy: 32, 720
   size: 26, 21
   orig: 26, 21
   offset: 0, 0
   index: -1
 crab4
   rotate: false
-  xy: 143, 811
+  xy: 106, 742
   size: 19, 22
   orig: 19, 22
   offset: 0, 0
   index: -1
 crab5
   rotate: false
-  xy: 96, 767
+  xy: 132, 861
   size: 25, 18
   orig: 25, 18
   offset: 0, 0
   index: -1
 crab6
   rotate: false
-  xy: 0, 825
+  xy: 178, 811
   size: 24, 22
   orig: 24, 22
   offset: 0, 0
   index: -1
 crab7
   rotate: false
-  xy: 217, 780
+  xy: 76, 789
   size: 24, 21
   orig: 24, 21
   offset: 0, 0
   index: -1
 crab8
   rotate: false
-  xy: 26, 825
+  xy: 180, 835
   size: 24, 22
   orig: 24, 22
   offset: 0, 0
   index: -1
 crab9
   rotate: false
-  xy: 174, 765
+  xy: 221, 859
   size: 21, 19
   orig: 21, 19
   offset: 0, 0
   index: -1
 crab10
   rotate: false
-  xy: 164, 811
+  xy: 56, 766
   size: 24, 21
   orig: 24, 21
   offset: 0, 0
   index: -1
 crab11
   rotate: false
-  xy: 68, 741
+  xy: 229, 808
   size: 26, 21
   orig: 26, 21
   offset: 0, 0
   index: -1
 crab12
   rotate: false
-  xy: 96, 744
+  xy: 28, 752
   size: 26, 21
   orig: 26, 21
   offset: 0, 0
   index: -1
 crab13
   rotate: false
-  xy: 182, 786
+  xy: 50, 789
   size: 24, 21
   orig: 24, 21
   offset: 0, 0
   index: -1
 dead_kirby
   rotate: false
-  xy: 217, 764
+  xy: 105, 862
   size: 25, 14
   orig: 25, 14
   offset: 0, 0
   index: -1
 diamond_coin
   rotate: false
-  xy: 164, 834
+  xy: 127, 821
   size: 15, 13
   orig: 15, 13
   offset: 0, 0
@@ -180,7 +215,7 @@ exit1
   index: -1
 exit2
   rotate: false
-  xy: 72, 656
+  xy: 200, 607
   size: 54, 62
   orig: 64, 77
   offset: 5, 14
@@ -194,7 +229,7 @@ exit3
   index: -1
 exit4
   rotate: false
-  xy: 200, 662
+  xy: 72, 656
   size: 54, 62
   orig: 64, 77
   offset: 5, 14
@@ -208,49 +243,49 @@ exit5
   index: -1
 exit6
   rotate: false
-  xy: 128, 713
+  xy: 200, 671
   size: 54, 50
   orig: 64, 77
   offset: 5, 14
   index: -1
 exit7
   rotate: false
-  xy: 202, 502
+  xy: 202, 555
   size: 52, 50
   orig: 64, 77
   offset: 6, 14
   index: -1
 explosion1
   rotate: false
-  xy: 226, 439
+  xy: 152, 836
   size: 26, 22
   orig: 26, 22
   offset: 0, 0
   index: -1
 explosion2
   rotate: false
-  xy: 184, 713
+  xy: 144, 821
   size: 14, 13
   orig: 14, 13
   offset: 0, 0
   index: -1
 explosion3
   rotate: false
-  xy: 197, 764
+  xy: 86, 720
   size: 18, 18
   orig: 18, 18
   offset: 0, 0
   index: -1
 explosion4
   rotate: false
-  xy: 42, 798
+  xy: 204, 808
   size: 23, 25
   orig: 23, 25
   offset: 0, 0
   index: -1
 explosion5
   rotate: false
-  xy: 36, 720
+  xy: 0, 720
   size: 30, 30
   orig: 30, 30
   offset: 0, 0
@@ -264,35 +299,35 @@ explosion6
   index: -1
 explosion7
   rotate: false
-  xy: 90, 787
+  xy: 0, 782
   size: 25, 27
   orig: 25, 27
   offset: 0, 0
   index: -1
 explosion8
   rotate: false
-  xy: 98, 816
+  xy: 178, 713
   size: 20, 24
   orig: 20, 24
   offset: 0, 0
   index: -1
 explosion9
   rotate: false
-  xy: 184, 744
+  xy: 160, 821
   size: 13, 13
   orig: 13, 13
   offset: 0, 0
   index: -1
 explosion_little1
   rotate: false
-  xy: 190, 832
+  xy: 88, 862
   size: 15, 15
   orig: 15, 15
   offset: 0, 0
   index: -1
 extra_life
   rotate: false
-  xy: 216, 463
+  xy: 216, 464
   size: 35, 35
   orig: 35, 35
   offset: 0, 0
@@ -334,56 +369,56 @@ grassHalfRight
   index: -1
 hillsmall
   rotate: false
-  xy: 202, 554
+  xy: 128, 713
   size: 48, 106
   orig: 48, 106
   offset: 0, 0
   index: -1
 jump2
   rotate: false
-  xy: 117, 787
+  xy: 178, 739
   size: 20, 23
   orig: 20, 23
   offset: 0, 0
   index: -1
 jumping
   rotate: false
-  xy: 213, 826
+  xy: 106, 790
   size: 19, 21
   orig: 19, 21
   offset: 0, 0
   index: -1
 jumping_inflated
   rotate: false
-  xy: 226, 409
+  xy: 0, 752
   size: 26, 28
   orig: 26, 28
   offset: 0, 0
   index: -1
 kirby-bullets
   rotate: false
-  xy: 68, 720
+  xy: 159, 860
   size: 32, 19
   orig: 32, 19
   offset: 0, 0
   index: -1
 open_mouth
   rotate: false
-  xy: 102, 720
+  xy: 206, 835
   size: 24, 22
   orig: 24, 22
   offset: 0, 0
   index: -1
 pineapple
   rotate: false
-  xy: 235, 803
+  xy: 70, 862
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 plant
   rotate: false
-  xy: 0, 720
+  xy: 70, 821
   size: 34, 39
   orig: 70, 70
   offset: 18, 0
@@ -425,14 +460,14 @@ stage_cleared
   index: -1
 standing
   rotate: false
-  xy: 52, 825
+  xy: 232, 831
   size: 21, 22
   orig: 21, 22
   offset: 0, 0
   index: -1
 strawberry
   rotate: false
-  xy: 184, 728
+  xy: 86, 740
   size: 13, 14
   orig: 13, 14
   offset: 0, 0
@@ -446,56 +481,56 @@ the_end
   index: -1
 walk1
   rotate: false
-  xy: 75, 824
+  xy: 129, 836
   size: 21, 23
   orig: 21, 23
   offset: 0, 0
   index: -1
 walk2
   rotate: false
-  xy: 120, 812
+  xy: 27, 782
   size: 21, 22
   orig: 21, 22
   offset: 0, 0
   index: -1
 walk3
   rotate: false
-  xy: 152, 765
+  xy: 106, 720
   size: 20, 20
   orig: 20, 20
   offset: 0, 0
   index: -1
 walk4
   rotate: false
-  xy: 213, 803
+  xy: 178, 788
   size: 20, 21
   orig: 20, 21
   offset: 0, 0
   index: -1
 walk5
   rotate: false
-  xy: 161, 787
+  xy: 106, 766
   size: 19, 22
   orig: 19, 22
   offset: 0, 0
   index: -1
 walk6
   rotate: false
-  xy: 67, 798
+  xy: 106, 836
   size: 21, 24
   orig: 21, 24
   offset: 0, 0
   index: -1
 walk7
   rotate: false
-  xy: 139, 787
+  xy: 178, 764
   size: 20, 22
   orig: 20, 22
   offset: 0, 0
   index: -1
 walk8
   rotate: false
-  xy: 234, 826
+  xy: 106, 813
   size: 19, 21
   orig: 19, 21
   offset: 0, 0

@@ -98,6 +98,8 @@ public class Assets implements Disposable, AssetErrorListener {
     public CloudAssets cloudAssets;
     public ExitPortalAssets exitPortalAssets;
     public BackgroundAssets backgroundAssets;
+    public OnscreenControlsAssets onscreenControlsAssets;
+
     //public TeleportationAssets teleportationAssets;
     private AssetManager assetManager;
 
@@ -122,7 +124,7 @@ public class Assets implements Disposable, AssetErrorListener {
         cloudAssets = new CloudAssets(atlas);
         backgroundAssets = new BackgroundAssets(atlas);
         exitPortalAssets = new ExitPortalAssets(atlas);
-        //teleportationAssets = new TeleportationAssets(atlas);
+        onscreenControlsAssets = new OnscreenControlsAssets(atlas);
         soundAssets = new SoundAssets();
 
     }
@@ -289,7 +291,6 @@ public class Assets implements Disposable, AssetErrorListener {
         public CloudAssets(TextureAtlas atlas){
             cloud1 = atlas.findRegion(CLOUD1);
             cloud2 = atlas.findRegion(CLOUD2);
-
         }
     }
 
@@ -332,27 +333,22 @@ public class Assets implements Disposable, AssetErrorListener {
         }
     }
 
-   /* public class TeleportationAssets{
+    public class OnscreenControlsAssets {
 
-        public final Animation teleportAnimation;
+        public final AtlasRegion moveRight;
+        public final AtlasRegion moveLeft;
+        public final AtlasRegion moveDown;
+        public final AtlasRegion shoot;
+        public final AtlasRegion jump;
 
-        public TeleportationAssets(TextureAtlas atlas){
-
-            Array<TextureRegion> teleportFrames = new Array<TextureRegion>();
-            teleportFrames.add(atlas.findRegion(TELEPORT));
-            teleportFrames.add(atlas.findRegion(TELEPORT2));
-            teleportFrames.add(atlas.findRegion(TELEPORT3));
-            teleportFrames.add(atlas.findRegion(TELEPORT4));
-            teleportFrames.add(atlas.findRegion(TELEPORT5));
-            teleportFrames.add(atlas.findRegion(TELEPORT6));
-            teleportFrames.add(atlas.findRegion(TELEPORT7));
-            teleportFrames.add(atlas.findRegion(TELEPORT8));
-            teleportFrames.add(atlas.findRegion(TELEPORT9));
-            teleportFrames.add(atlas.findRegion(TELEPORT10));
-
-            teleportAnimation = new Animation(0.5f, teleportFrames, PlayMode.NORMAL);
+        public OnscreenControlsAssets(TextureAtlas atlas) {
+            moveRight = atlas.findRegion(MOVE_RIGHT_BUTTON);
+            moveLeft = atlas.findRegion(MOVE_LEFT_BUTTON);
+            moveDown = atlas.findRegion(MOVE_DOWN_BUTTON);
+            shoot = atlas.findRegion(SHOOT_BUTTON);
+            jump = atlas.findRegion(JUMP_BUTTON);
         }
-    }*/
+    }
 
     public class SoundAssets {
         public final Sound kirbyKnockOut;
@@ -367,8 +363,6 @@ public class Assets implements Disposable, AssetErrorListener {
             levelCompleteSound = Gdx.audio.newMusic(Gdx.files.internal(LEVEL_COMPLETE_SOUND));
             fireBulletSound = Gdx.audio.newSound(Gdx.files.internal(FIREBALL_SOUND_FILE_PATH));
             itemPickupSound = Gdx.audio.newSound(Gdx.files.internal(ITEM_PICKUP_SOUND_FILE_PATH));
-
-
         }
 
     }

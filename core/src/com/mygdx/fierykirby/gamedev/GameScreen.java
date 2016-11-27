@@ -10,6 +10,7 @@ import com.mygdx.fierykirby.gamedev.Utility.Assets;
 import com.mygdx.fierykirby.gamedev.Utility.Constants;
 import com.mygdx.fierykirby.gamedev.Utility.KirbyHUD;
 import com.mygdx.fierykirby.gamedev.Utility.LevelLoader;
+import com.mygdx.fierykirby.gamedev.Utility.OnScreenControls;
 
 import static com.mygdx.fierykirby.gamedev.Utility.Constants.WORLD_SIZE;
 
@@ -20,9 +21,10 @@ public class GameScreen extends ScreenAdapter {
 
     public static final String TAG = GameScreen.class.getName();
 
-    Level level;
-    SpriteBatch batch;
-    ExtendViewport gameplayViewport;
+    private Level level;
+    private SpriteBatch batch;
+    private ExtendViewport gameplayViewport;
+    private OnScreenControls onscreenControls;
     private KirbyHUD hud;
 
 
@@ -35,6 +37,7 @@ public class GameScreen extends ScreenAdapter {
         level = LevelLoader.load("level1", gameplayViewport);
         batch = new SpriteBatch();
         hud = new KirbyHUD();
+        onscreenControls = new OnScreenControls();
 
     }
 
@@ -43,6 +46,9 @@ public class GameScreen extends ScreenAdapter {
     public void resize(int width, int height) {
         hud.viewport.update(width, height, true);
         gameplayViewport.update(width, height, true);
+        onscreenControls.viewport.update(width, height, true);
+        onscreenControls.recalculateButtonPositions();
+
     }
 
     @Override
@@ -66,10 +72,8 @@ public class GameScreen extends ScreenAdapter {
 
         batch.setProjectionMatrix(gameplayViewport.getCamera().combined);
         level.render(batch);
+        onscreenControls.render(batch);
         hud.render(batch, level.getKirby().getLives(), level.score);
-
-
-
     }
 
 

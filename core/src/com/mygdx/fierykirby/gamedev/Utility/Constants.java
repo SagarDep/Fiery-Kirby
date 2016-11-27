@@ -18,7 +18,7 @@ public interface Constants {
 
     // HUD
     float HUD_MARGIN = 15;
-    String HUD_SCORE_LABEL = "Score: ";
+    String HUD_SCORE_LABEL = "Score : ";
     float HUD_VIEWPORT_SIZE = 480;
     float KIRBY_HUD_SCALE = 0.7f;
     float SCORE_100 = 100;
@@ -40,7 +40,6 @@ public interface Constants {
     String DEAD = "dead_kirby";
 
 
-
     String BREATHE_FIRE = "breathe_fire";
     String EXTRA_LIFE = "extra_life";
     String CLOUD_ENEMY = "cloud_enemy";
@@ -58,12 +57,12 @@ public interface Constants {
 
     // Platform
     String BASE = "grass";
-    String GRASS_HALF_LEFT= "grassHalfLeft";
-    String GRASS_HALF_MID= "grassHalfMid";
-    String GRASS_HALF_RIGHT= "grassHalfRight";
-    String SAND_HALF_LEFT= "sandHalfLeft";
-    String SAND_HALF_MID= "sandHalfMid";
-    String SAND_HALF_RIGHT= "sandHalfRight";
+    String GRASS_HALF_LEFT = "grassHalfLeft";
+    String GRASS_HALF_MID = "grassHalfMid";
+    String GRASS_HALF_RIGHT = "grassHalfRight";
+    String SAND_HALF_LEFT = "sandHalfLeft";
+    String SAND_HALF_MID = "sandHalfMid";
+    String SAND_HALF_RIGHT = "sandHalfRight";
 
 
     //Enemy
@@ -78,18 +77,17 @@ public interface Constants {
     String CRAB8 = "crab8";
     String CRAB9 = "crab9";
     String CRAB10 = "crab10";
-    String CRAB11= "crab11";
-    String CRAB12= "crab12";
-    String CRAB13= "crab13";
+    String CRAB11 = "crab11";
+    String CRAB12 = "crab12";
+    String CRAB13 = "crab13";
 
     float CRAB_SPEED = 10f;
     float CRAB_SCALE = 0.8f;
     float CRAB_WIDTH = 20f;
-    float CRAB_HEIGHT= 21f;
+    float CRAB_HEIGHT = 21f;
     float CRAB_WALK_LOOP = 0.1f;
     int ENEMY_HEALTH = 5;
     float ENEMY_DEAD_OFFSET = 6f;
-
 
 
     // Fireball
@@ -172,6 +170,16 @@ public interface Constants {
     String BUSH = "bush";
     String ROCK = "rock";
     String BROKEN_FENCE = "fenceBroken";
+
+    // Onscreen Controls
+    float ONSCREEN_CONTROLS_VIEWPORT_SIZE = 200;
+    String MOVE_LEFT_BUTTON = "button-move-left";
+    String MOVE_RIGHT_BUTTON = "button-move-right";
+    String SHOOT_BUTTON = "button-shoot";
+    String MOVE_DOWN_BUTTON = "button-down";
+    String JUMP_BUTTON = "button-jump";
+    Vector2 BUTTON_CENTER = new Vector2(15, 15);
+    float BUTTON_SIZE = 32;
 
 
     // Level Loading

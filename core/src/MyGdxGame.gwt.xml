@@ -5,6 +5,7 @@
 	<source path="com/mygdx/fierykirby/gamedev" />
     <inherits name="com.google.gwt.http.HTTP" />
     <inherits name="com.google.gwt.json.JSON" />
+    <inherits name='com.google.gwt.user.User'/>
 
 </module>
 

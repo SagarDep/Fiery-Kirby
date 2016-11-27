@@ -10,6 +10,8 @@
 
 	<inherits name="com.google.gwt.http.HTTP" />
 	<inherits name="com.google.gwt.json.JSON" />
+	<inherits name='com.google.gwt.user.User'/>
+
 
 	<set-configuration-property name="gdx.assetpath" value="../android/assets" />
 </module>

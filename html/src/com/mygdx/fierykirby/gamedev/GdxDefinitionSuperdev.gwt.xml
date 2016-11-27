@@ -7,6 +7,8 @@
     <inherits name='com.mygdx.fierykirby.gamedev.GdxDefinition' />
 	<inherits name="com.google.gwt.http.HTTP" />
 	<inherits name="com.google.gwt.json.JSON" />
+	<inherits name='com.google.gwt.user.User'/>
+
 
 
 	<collapse-all-properties />
