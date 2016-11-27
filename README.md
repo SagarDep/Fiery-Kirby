@@ -6,7 +6,7 @@ Level demo https://youtu.be/vU91DTM5uts
 ## Features
 With this game, you can:
 
-* Blast aweful crab enemies to smithereens
+* Blast awful crab enemies to smithereens
 
 * Have the cutest looking kirby jumping around your screen
 
