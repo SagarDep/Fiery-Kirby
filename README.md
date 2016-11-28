@@ -26,7 +26,7 @@ Walkthrough of level 1 game play
 
 Screenshot of game running on Android
 
-<img src="core/src/screenshots/screenshot_android.png" alt="Drawing"  />
+<img src="core/src/screenshots/screenshot_android1.png" alt="Drawing"  />
 
 
 
