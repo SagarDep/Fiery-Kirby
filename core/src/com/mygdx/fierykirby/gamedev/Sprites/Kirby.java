@@ -41,6 +41,9 @@ public class Kirby {
 
     public final static String TAG = Kirby.class.getName();
 
+    public boolean jumpButtonPressed;
+    public boolean leftButtonPressed;
+    public boolean rightButtonPressed;
     private Vector2 position;
     private Direction direction;
     private Vector2 velocity;
@@ -52,10 +55,10 @@ public class Kirby {
     private WalkState walkState;
     private SpawnState spawnState;
     private FireState fireState;
-    Vector2 kirbysPosWhenBulletFired;
+    private Vector2 kirbysPosWhenBulletFired;
 
-    long walkStartTime;
-    long startFiringTime;
+    private long walkStartTime;
+    private long startFiringTime;
     private int lives;
 
 
@@ -70,7 +73,6 @@ public class Kirby {
         lastFramePos = new Vector2();
         kirbysPosWhenBulletFired = new Vector2();
         this.level = level;
-
         init();
     }
 
@@ -112,7 +114,6 @@ public class Kirby {
             velocity.y = 0;
         }
 
-
         // Check every platform to see if Kirby has landed on any of them
         for (Platform platform : platforms) {
             if (landedOnPlatform(platform)) {
@@ -133,7 +134,7 @@ public class Kirby {
         enemyAndKirbyOverlap(kirbyBounds);
         kirbyCoinOverlap(kirbyBounds);
 
-        if (Gdx.input.isKeyJustPressed(Input.Keys.UP)) {
+        if (Gdx.input.isKeyJustPressed(Input.Keys.UP) || jumpButtonPressed) {
             switch (jumpState) {
                 case GROUNDED:
                     startJump();
@@ -153,13 +154,16 @@ public class Kirby {
             endJump();
         }
 
-        if (Gdx.input.isKeyPressed(Input.Keys.LEFT) && spawnState == SpawnState.NOT_SPAWNING) {
-            moveLeft(delta);
-        } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT) && spawnState == SpawnState.NOT_SPAWNING) {
-            moveRight(delta);
-        } else {
-            walkState = WalkState.STANDING;
+        if(spawnState == SpawnState.NOT_SPAWNING){
+            if (Gdx.input.isKeyPressed(Input.Keys.LEFT) || leftButtonPressed ) {
+                moveLeft(delta);
+            } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT) || rightButtonPressed) {
+                moveRight(delta);
+            } else {
+                walkState = WalkState.STANDING;
+            }
         }
+
 
         // Fire fireballs when Spacebar is pressed
         if (Gdx.input.isKeyJustPressed(Input.Keys.SPACE)) {
@@ -252,7 +256,7 @@ public class Kirby {
         return leftFootIn || rightFootIn || straddle;
     }
 
-    private void fireBullet() {
+    public void fireBullet() {
 
         Vector2 bulletPosition;
 

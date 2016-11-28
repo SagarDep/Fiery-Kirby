@@ -1,5 +1,6 @@
 package com.mygdx.fierykirby.gamedev;
 
+import com.badlogic.gdx.Application;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.assets.AssetManager;
@@ -27,7 +28,6 @@ public class GameScreen extends ScreenAdapter {
     private OnScreenControls onscreenControls;
     private KirbyHUD hud;
 
-
     @Override
     public void show() {
 
@@ -38,10 +38,16 @@ public class GameScreen extends ScreenAdapter {
         batch = new SpriteBatch();
         hud = new KirbyHUD();
         onscreenControls = new OnScreenControls();
+        onscreenControls.kirby = level.getKirby();
 
+        if(onMobile()){
+            Gdx.input.setInputProcessor(onscreenControls);
+        }
     }
 
-
+    public boolean onMobile(){
+        return Gdx.app.getType() == Application.ApplicationType.Android || Gdx.app.getType() == Application.ApplicationType.iOS;
+    }
     @Override
     public void resize(int width, int height) {
         hud.viewport.update(width, height, true);
@@ -72,8 +78,11 @@ public class GameScreen extends ScreenAdapter {
 
         batch.setProjectionMatrix(gameplayViewport.getCamera().combined);
         level.render(batch);
-        onscreenControls.render(batch);
         hud.render(batch, level.getKirby().getLives(), level.score);
+
+        if (onMobile()){
+            onscreenControls.render(batch);
+        }
     }
 
 

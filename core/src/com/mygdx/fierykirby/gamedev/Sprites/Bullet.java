@@ -41,7 +41,6 @@ public class Bullet {
                 break;
         }
 
-        // TODO: Make bullet travel only a constant distance
         // Once bullet is offScreen set active to false so it can be removed by the delayedRemoval Array
         /*if (position.x > level.getKirby().kirbysPosWhenBulletFired.x + 40 || position.x < level.getKirby().kirbysPosWhenBulletFired.x - 40) {
             isActive = false;
