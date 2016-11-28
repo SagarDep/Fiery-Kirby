@@ -56,25 +56,25 @@ public class OnScreenControls extends InputAdapter {
 
         } else if (viewportPosition.dst(jumpCenter) < BUTTON_SIZE) {
 
-            // TODO: Save the jumpPointer and set gigaGal.jumpButtonPressed = true
+            // TODO: Save the jumpPointer and set kirby.jumpButtonPressed = true
             jumpPointer = pointer;
             kirby.jumpButtonPressed = true;
 
         } else if (viewportPosition.dst(moveLeftCenter) < BUTTON_SIZE) {
 
-            // TODO: Save the moveLeftPointer, and set gigaGal.leftButtonPressed = true
+            // TODO: Save the moveLeftPointer, and set kirby.leftButtonPressed = true
             moveLeftPointer = pointer;
             kirby.leftButtonPressed = true;
 
         } else if (viewportPosition.dst(moveRightCenter) < BUTTON_SIZE) {
 
-            // TODO: Save the moveRightPointer, and set gigaGal.rightButtonPressed = true
+            // TODO: Save the moveRightPointer, and set kirby.rightButtonPressed = true
             moveRightPointer = pointer;
             kirby.rightButtonPressed = true;
 
         }else if (viewportPosition.dst(moveDownCenter) < BUTTON_SIZE) {
 
-            // TODO: Save the moveRightPointer, and set gigaGal.rightButtonPressed = true
+            // TODO: Save the moveRightPointer, and set kirby.rightButtonPressed = true
             moveDownPointer = pointer;
             kirby.downButtonPressed = true;
 
@@ -126,7 +126,7 @@ public class OnScreenControls extends InputAdapter {
             jumpPointer = 0;
         }
 
-        // TODO: If the moveLeftPointer is no longer touched, inform GigaGal and zero moveLeftPointer
+        // TODO: If the moveLeftPointer is no longer touched, inform Kirby and zero moveLeftPointer
         if (!Gdx.input.isTouched(moveLeftPointer)) {
             kirby.leftButtonPressed = false;
             moveLeftPointer = 0;
