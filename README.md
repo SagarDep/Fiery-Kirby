@@ -1,6 +1,8 @@
 # Fiery-Kirby
 Here is a platformer game with Kirby as main character which I made from scratch. Built using [Libdgx](https://libgdx.badlogicgames.com/) and designed using [Overlap2D](http://overlap2d.com/).
 
+Compatible with Android/iOS/Desktop and web
+
 Level demo https://youtu.be/vU91DTM5uts
 
 ## Features
@@ -17,9 +19,16 @@ With this game, you can:
 * The best part: Game logic has been separated from world design. Now anyone can design their own level.
 
 ## GamePlay Video
+
 Walkthrough of level 1 game play
 
 ![capture22](https://cloud.githubusercontent.com/assets/12980868/18617141/faade444-7d96-11e6-84fe-885318724712.gif)
+
+Screenshot of game running on Android
+
+<img src="core/src/screenshots/screenshot_android.png" alt="Drawing"  />
+
+
 
 ## Credit
 All sprites were obtained from [SpritersResource](http://www.spriters-resource.com/), http://kenney.nl/assets with catchy tunes from [Candy Valley](http://www.playonloop.com/2015-music-loops/candy-valley/)
