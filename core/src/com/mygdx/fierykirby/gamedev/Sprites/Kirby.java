@@ -44,6 +44,7 @@ public class Kirby {
     public boolean jumpButtonPressed;
     public boolean leftButtonPressed;
     public boolean rightButtonPressed;
+    public boolean downButtonPressed;
     private Vector2 position;
     private Direction direction;
     private Vector2 velocity;
@@ -148,14 +149,14 @@ public class Kirby {
             endJump();
         }
 
-        if (Gdx.input.isKeyJustPressed(Input.Keys.DOWN) && position.y != GROUND_HEIGHT) {
+        if ((Gdx.input.isKeyJustPressed(Input.Keys.DOWN) || downButtonPressed) && position.y != GROUND_HEIGHT) {
             kirbyFallsThroughPlatform();
         } else {
             endJump();
         }
 
-        if(spawnState == SpawnState.NOT_SPAWNING){
-            if (Gdx.input.isKeyPressed(Input.Keys.LEFT) || leftButtonPressed ) {
+        if (spawnState == SpawnState.NOT_SPAWNING) {
+            if (Gdx.input.isKeyPressed(Input.Keys.LEFT) || leftButtonPressed) {
                 moveLeft(delta);
             } else if (Gdx.input.isKeyPressed(Input.Keys.RIGHT) || rightButtonPressed) {
                 moveRight(delta);
@@ -269,7 +270,7 @@ public class Kirby {
         // Change the position in which the fireball spawns from based on direction -> Left or Right
         if (direction == Direction.RIGHT) {
 
-             bulletPosition = new Vector2(position.x + FIREBALL_OFFSET_FROM_KIRBY.x, position.y + FIREBALL_OFFSET_FROM_KIRBY.y);
+            bulletPosition = new Vector2(position.x + FIREBALL_OFFSET_FROM_KIRBY.x, position.y + FIREBALL_OFFSET_FROM_KIRBY.y);
         } else {
             bulletPosition = new Vector2(position.x - FIREBALL_OFFSET_FROM_KIRBY.x, position.y + FIREBALL_OFFSET_FROM_KIRBY.y);
         }
@@ -318,7 +319,7 @@ public class Kirby {
 
     public void render(SpriteBatch batch) {
 
-        if(!isLevelComplete) {
+        if (!isLevelComplete) {
             TextureRegion region = Assets.instance.kirbyAssets.standing;
             if (direction == Direction.LEFT) {
                 if (jumpState != JumpState.GROUNDED) {

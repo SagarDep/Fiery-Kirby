@@ -28,6 +28,8 @@ public class OnScreenControls extends InputAdapter {
     private int moveLeftPointer;
     private int moveRightPointer;
     private int jumpPointer;
+    private int moveDownPointer;
+
 
 
     public OnScreenControls() {
@@ -69,6 +71,12 @@ public class OnScreenControls extends InputAdapter {
             // TODO: Save the moveRightPointer, and set gigaGal.rightButtonPressed = true
             moveRightPointer = pointer;
             kirby.rightButtonPressed = true;
+
+        }else if (viewportPosition.dst(moveDownCenter) < BUTTON_SIZE) {
+
+            // TODO: Save the moveRightPointer, and set gigaGal.rightButtonPressed = true
+            moveDownPointer = pointer;
+            kirby.downButtonPressed = true;
 
         }
 
@@ -127,6 +135,10 @@ public class OnScreenControls extends InputAdapter {
         // TODO: Do the same for moveRightPointer
         if (!Gdx.input.isTouched(moveRightPointer)) {
             kirby.rightButtonPressed = false;
+            moveRightPointer = 0;
+        }
+        if (!Gdx.input.isTouched(moveDownPointer)) {
+            kirby.downButtonPressed = false;
             moveRightPointer = 0;
         }
 
